@@ -1,0 +1,4686 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Myshop.com</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- content-1 start -->
+
+    <!-- header start -->
+    <div class="container-fluid mynav sticky-top">
+      <div class="row">
+        <div class="col-12 col-md-7 d-inline-flex py-1 bg-white">
+          <i class="fas fa-bars" id="menu-btn" onclick="openmenu()"></i>
+
+          <a href="index.html"
+            ><img src="img/ligo.jpg" alt="official logo" class="img-fluid logo"
+          /></a>
+          <input
+            type="text"
+            class="form-control mysearch ml-3"
+            placeholder="Search"
+          />
+          <span
+            ><button class="btn searchbtn" type="submit">
+              <i class="fas fa-search text-light"></i></button
+          ></span>
+        </div>
+
+        <div class="col-12 col-md-5 mynav2">
+          <div class="row text-center text-capitalize">
+            <div class="col-4 col-sm-4 py-2">
+              <i class="fas fa-shopping-cart text-white pl-1 mybtnii"></i>
+              <button
+                type="button"
+                class="btn btn-sm mybtn boxsd-none"
+                data-toggle="modal"
+                data-target="#cartid"
+              >
+                <a href="#">Cart</a>
+              </button>
+            </div>
+            <div class="col-4 col-sm-4 bordermd py-2">
+              <button
+                type="button"
+                class="btn btn-sm mybtn boxsd-none"
+                data-toggle="modal"
+                data-target="#staticBackdrop"
+              >
+                <a href="#">SignUp</a>
+              </button>
+            </div>
+            <div class="col-4 col-sm-4 py-2">
+              <button
+                type="button"
+                class="btn btn-sm mybtn boxsd-none"
+                data-toggle="modal"
+                data-target="#loginid"
+              >
+                <a href="#">Login</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- chat start -->
+    <!-- <a href="#"><i class="far fa-comment-dots chatnow" title="Chat here" onclick="chatopen()"></i></a> -->
+    <a href="#"
+      ><i
+        class="fas fa-arrow-circle-up chatnow text-info"
+        title="Back To Top"
+        onclick="topback()"
+      ></i
+    ></a>
+    <div
+      class="alert alert-info alert-dismissible fade show"
+      role="alert"
+      id="chathere"
+    >
+      <small><b>! please login to chat</b></small>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-- chat end -->
+
+    <!-- cart item start -->
+    <div class="modal fade" id="cartid" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title">Cart items</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true" class="text-white">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-left">
+            . <br />
+            . <br />
+            . <br />. <br />.
+          </div>
+          <div class="modal-footer text-left justify-content-center">
+            <p>Your cart is Empty!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cart item end -->
+
+    <!-- signup form start -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-backdrop="static"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Create new account
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true" class="text-white">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-left">
+            <form>
+              <div class="typing-img">
+                <img src="img/typing.gif" alt="typing" />
+              </div>
+              <div class="form-group mb-2">
+                <label for="fname"></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uname"
+                  placeholder="Enter firstname"
+                  name="fname"
+                  required
+                />
+              </div>
+              <div class="form-group mb-2">
+                <label for="lname"></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uname"
+                  placeholder="Enter lastname"
+                  name="lname"
+                  required
+                />
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleInputEmail1"></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email address"
+                  required
+                />
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleInputPassword1"></label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleInputPassword1"></label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Re-enter password"
+                  required
+                />
+              </div>
+              <hr />
+              <button type="submit" class="btn btn-info btn-block">
+                SignUp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- signup form end -->
+
+    <!-- login form start -->
+    <div
+      class="modal fade"
+      id="loginid"
+      data-backdrop="static"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true" class="text-white">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-left">
+            <form>
+              <div class="typing-img">
+                <img src="img/typing.gif" alt="typing" />
+              </div>
+              <div class="form-group mb-2">
+                <label for="uname"></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uname"
+                  placeholder="Enter username"
+                  name="uname"
+                  required
+                />
+              </div>
+              <div class="form-group mb-2">
+                <label for="logpassword"></label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="logpassword"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+              <hr />
+              <button type="submit" class="btn btn-info btn-block">
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login form end -->
+
+    <!-- header end -->
+
+    <!-- menu start -->
+    <div class="my-sidemenu" id="my-sidemenu">
+      <div class="bg-white sticky-top">
+        <img
+          src="img/ligo.jpg"
+          alt="official logo"
+          class="img-fluid pl-2 py-4"
+          width="120"
+          height="100"
+        />
+        <small
+          class="menuclose float-right pr-3 pb-2 pt-2"
+          id="close-btn"
+          onclick="closemenu()"
+          >&times;</small
+        >
+      </div>
+      <h3 class="text-center text-info pt-3">Categories</h3>
+      <ul class="text-capitalize pl-0">
+        <li>
+          mobile <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+          <ul>
+            <li><a href="#apple">apple</a></li>
+            <li><a href="#samsung">samsung</a></li>
+            <li><a href="#symphony">symphony</a></li>
+            <li><a href="#nokia">nokia</a></li>
+            <li><a href="#xiaomi">xiaomi</a></li>
+            <li><a href="#huawei">huawei</a></li>
+            <li><a href="#oppo">oppo</a></li>
+            <li><a href="#vivo">vovo</a></li>
+            <li><a href="#walton">walton</a></li>
+            <li><a href="#oneplus">oneplus</a></li>
+            <li><a href="#realme">realme</a></li>
+            <li><a href="#htc">htc</a></li>
+            <li><a href="#lenovo">lenovo</a></li>
+            <li><a href="#otherbrand">other brand</a></li>
+          </ul>
+        </li>
+        <li>
+          laptops <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+          <ul>
+            <li><a href="#hp">hp</a></li>
+            <li><a href="#asus">asus</a></li>
+            <li><a href="#acer">acer</a></li>
+            <li><a href="#dell">dell</a></li>
+            <li><a href="#lenovo">lenovo</a></li>
+            <li><a href="#applemac">apple mac</a></li>
+            <li><a href="#lg">lG</a></li>
+            <li><a href="#samsunglaptop">samsung laptop</a></li>
+            <li><a href="#razer">razer</a></li>
+            <li><a href="#microsoft">microsoft</a></li>
+          </ul>
+        </li>
+        <li>
+          books <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+          <ul>
+            <li><a href="#junglebook">jungle book</a></li>
+            <li><a href="#harrypotter">harry potter</a></li>
+            <li><a href="#blackbeauty">black beauty</a></li>
+            <li><a href="#starwars">star wars</a></li>
+            <li><a href="#tarzan">tarzan</a></li>
+          </ul>
+        </li>
+        <li>
+          baby care <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+          <ul>
+            <li><a href="#babyoil">baby oil</a></li>
+            <li><a href="#babylosion">baby losion</a></li>
+            <li><a href="#babywipes">baby wipes</a></li>
+            <li><a href="#babycream">baby cream</a></li>
+            <li><a href="#babyshop">baby shop</a></li>
+            <li><a href="#babyshampoo">baby shampoo</a></li>
+            <li><a href="#heatingpad">heating pad</a></li>
+          </ul>
+        </li>
+        <li>
+          Fitness <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+          <ul>
+            <li><a href="#balanceball">balance ball</a></li>
+            <li><a href="#dumbbells">dumbbells</a></li>
+            <li><a href="#trxbands">TRX bands</a></li>
+            <li><a href="#medicineball">medicine ball</a></li>
+            <li><a href="#kettlebell">kettlebell</a></li>
+            <li><a href="#exercisedice">exercise dice</a></li>
+            <li><a href="#sliders">sliders</a></li>
+            <li><a href="#treadmill">treadmill</a></li>
+            <li><a href="#yagastrap">Yoga strap</a></li>
+          </ul>
+        </li>
+        <li>
+          electrical <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+          <ul>
+            <li><a href="#wire">wire</a></li>
+            <li><a href="#cable">cable</a></li>
+            <li><a href="#light">light</a></li>
+            <li><a href="#switch">switch</a></li>
+            <li><a href="#circuitbreakers">circuit breakers</a></li>
+            <li><a href="#motorcontrol">motor control</a></li>
+            <li><a href="#electricalbox">electrical box</a></li>
+            <li><a href="#electricconnectors">electric connectors</a></li>
+          </ul>
+        </li>
+        <li>
+          home & kitchen<i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+          <ul>
+            <li><a href="#bed">bed</a></li>
+            <li><a href="#sofas">sofas</a></li>
+            <li><a href="#chairs">chairs</a></li>
+            <li><a href="#table">table</a></li>
+            <li><a href="#clothesdryers">clothes dryers</a></li>
+            <li><a href="#boolcases">bookcases</a></li>
+            <li><a href="#cookingutensils">cooking utensils</a></li>
+            <li><a href="#wardrobes">wardrobes</a></li>
+            <li><a href="#oven">oven</a></li>
+            <li><a href="#blender">blender</a></li>
+            <li><a href="#kitchenshears">kitchen shears</a></li>
+            <li><a href="#colander">colander</a></li>
+            <li><a href="#whisk">whisk</a></li>
+            <li><a href="#spatula">spatula</a></li>
+            <li><a href="#bakingsheet">baking sheet</a></li>
+            <li><a href="#mugs">mugs</a></li>
+            <li><a href="#glasses">glasses</a></li>
+          </ul>
+        </li>
+
+        <li>
+          news feed<i class="fas fa-newspaper pl-2"></i>
+          <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+        </li>
+
+        <li>
+          orders<i class="fas fa-cart-plus pl-2"></i>
+          <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+        </li>
+
+        <li>
+          vouchers<i class="fas fa-clipboard-list pl-2"></i>
+          <i class="fas fa-angle-right float-right pl-4"></i>
+          <i class="fas fa-angle-down float-right pl-4"></i>
+        </li>
+      </ul>
+      <hr />
+      <div class="pl-2 d-block">
+        <p>
+          <i class="fas fa-phone text-danger pl-3"></i> Hotline
+          <span class="d-block pl-5">0879637574568</span>
+        </p>
+        <hr />
+        <small
+          ><a href="#">Privacy policy.</a> <a href="#">Purchasing policy.</a>
+          <a href="#">Cooking policy.</a>
+          <a href="#">Terms & condition.</a></small
+        >
+
+        <p><small>©2020.myshop.com</small></p>
+      </div>
+    </div>
+    <!-- menu end -->
+
+    <!-- content-1 end -->
+
+    <!-- main-content start -->
+    <section class="main-content my-3">
+      <!-- content-2 start -->
+      <div class="mb-5">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide mx-3"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleCaptions"
+              data-slide-to="0"
+              class="active bg-info"
+            ></li>
+            <li
+              data-target="#carouselExampleCaptions"
+              data-slide-to="1"
+              class="bg-info"
+            ></li>
+            <li
+              data-target="#carouselExampleCaptions"
+              data-slide-to="2"
+              class="bg-info"
+            ></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/offfer3.jpg"
+                class="d-block img-fluid my-slider"
+                alt="kitchen"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/offer1.jpg"
+                class="d-block img-fluid my-slider"
+                alt="books"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/offer2.jpg"
+                class="d-block img-fluid my-slider"
+                alt="mens hoodies"
+              />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="prev"
+          >
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="next"
+          >
+          </a>
+        </div>
+      </div>
+      <!-- content-2 end -->
+
+      <!-- content-3 start -->
+      <section class="content-3">
+        <div>
+          <div class="row bg-white text-center myrow font-weight-bold">
+            <div
+              class="col-4 col-sm-4 pb-1 pt-3"
+              id="categoriesbr"
+              onclick="categories()"
+            >
+              <p><a>Categories</a></p>
+            </div>
+            <div
+              class="col-4 col-sm-4 pb-1 pt-3"
+              id="brandbr"
+              onclick="brand()"
+            >
+              <p><a>Brands</a></p>
+            </div>
+            <div
+              class="col-4 col-sm-4 pb-1 pt-3"
+              id="shoppingbr"
+              onclick="shopping()"
+            >
+              <p><a>Offer</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- content-3 end -->
+
+      <!-- content-4 start -->
+      <section class="content-4 mt-3">
+        <!-- categories start -->
+        <div class="grid-container" id="categories">
+          <div class="grid-item">
+            <a href="#digitalgoods">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/digitalgoods.png" alt="digital goods" />
+                </div>
+                <div class="pt-5">
+                  <p>digital goods</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#bag&luggage">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/bag.png" alt="bag & luggage" />
+                </div>
+                <div class="pt-5">
+                  <p>bag & luggage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#books&stationery">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/book.png" alt="books" />
+                </div>
+                <div class="pt-5">
+                  <p>books & stationery</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#mobile">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/mobile.png" alt="mobile" />
+                </div>
+                <div class="pt-5">
+                  <p>mobile</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#laptop">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/laptop.png" alt="laptop" />
+                </div>
+                <div class="pt-5">
+                  <p>Laptop</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#fashionformen">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/t-shirt.png" alt="fashion for men" />
+                </div>
+                <div class="pt-5">
+                  <p>Fashion for men</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#fashionforwomen">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/girlshoe.png" alt="fashion for men" />
+                </div>
+                <div class="pt-5">
+                  <p>Fashion for women</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#furniture">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/furniture.png" alt="furniture" />
+                </div>
+                <div class="pt-5">
+                  <p>furniture</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#event&media">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/dslr.png" alt="Event & media" />
+                </div>
+                <div class="pt-5">
+                  <p>event & media</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#homeappliance">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/fridge.png" alt="home appliance" />
+                </div>
+                <div class="pt-5">
+                  <p>home appliance</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#kitchen&dining">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/kitchen.png" alt="kitchen & dining" />
+                </div>
+                <div class="pt-5">
+                  <p>kitchen & dining</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#homegarden">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/garden.png" alt="home garden" />
+                </div>
+                <div class="pt-5">
+                  <p>home garden</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#electric&parts">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/electric.png" alt="electric & parts" />
+                </div>
+                <div class="pt-5">
+                  <p>electric & parts</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#kids">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/kidstoy.png" alt="kids" />
+                </div>
+                <div class="pt-5">
+                  <p>kids</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#sports">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/cricket.png" alt="sports" />
+                </div>
+                <div class="pt-5">
+                  <p>sports</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#jewellery">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/jewellery.png" alt="jewellery" />
+                </div>
+                <div class="pt-5">
+                  <p>jewellery</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#watch&clock">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/watch2.png" alt="watch & clock" />
+                </div>
+                <div class="pt-5">
+                  <p>watch & clock</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#paints">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/paints.png" alt="paints" />
+                </div>
+                <div class="pt-5">
+                  <p>paints</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- categories end -->
+
+        <!-- brand start  -->
+        <div class="grid-container" id="brand">
+          <div class="grid-item">
+            <a href="#lifebuoy">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/lifebuoy.png" alt="lifebuoy" />
+                </div>
+                <div class="pt-5">
+                  <p>lifebuoy</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#walton">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/walton.png" alt="walton" />
+                </div>
+                <div class="pt-5">
+                  <p>walton</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#ktm">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/ktm.png" alt="ktm" />
+                </div>
+                <div class="pt-5">
+                  <p>KTM</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#samsung">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/samsung.png" alt="samsung" />
+                </div>
+                <div class="pt-5">
+                  <p>samsung</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#bashundhara">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/bashundhara.png" alt="bashundhara" />
+                </div>
+                <div class="pt-5">
+                  <p>bashundhara</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#runner">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/runner.png" alt="runner" />
+                </div>
+                <div class="pt-5">
+                  <p>runner</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#xiaomi">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/xioami.png" alt="xioami" />
+                </div>
+                <div class="pt-5">
+                  <p>xioami</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#fair&lovely">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/fair&lovely.png" alt="fair & lovely" />
+                </div>
+                <div class="pt-5">
+                  <p>fair & lovely</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#apple">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/apple.png" alt="apple" />
+                </div>
+                <div class="pt-5">
+                  <p>apple</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#toyota">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/toyota.png" alt="toyota" />
+                </div>
+                <div class="pt-5">
+                  <p>toyota</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#yamaha">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/yamaha.png" alt="yamaha" />
+                </div>
+                <div class="pt-5">
+                  <p>yamaha</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#bajaj">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/bajaj.png" alt="bajaj" />
+                </div>
+                <div class="pt-5">
+                  <p>bajaj</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#aci">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/aci.png" alt="aci" />
+                </div>
+                <div class="pt-5">
+                  <p>aci</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#dove">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/dove.png" alt="dove" />
+                </div>
+                <div class="pt-5">
+                  <p>dove</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#unilever">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/unilever.png" alt="unilever" />
+                </div>
+                <div class="pt-5">
+                  <p>unilever</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#lux">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/lux.png" alt="lux" />
+                </div>
+                <div class="pt-5">
+                  <p>lux</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#pran">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/pran.png" alt="pran" />
+                </div>
+                <div class="pt-5">
+                  <p>pran</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="#bata">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2"
+                >
+                  <img src="img/bata.png" alt="bata" />
+                </div>
+                <div class="pt-5">
+                  <p>bata</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- brand end -->
+
+        <!-- offer start -->
+        <section class="content-6 pt-2" id="shopping">
+          <h3 class="my-h3 text-white">Week Offer</h3>
+          <div class="my-grid-container pt-2 text-center myoffer">
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi K20 pro</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="my-grid-item">
+              <a href="product-html/samsung-phone/samsung-a51.html">
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center pt-2 px-1"
+                  >
+                    <img
+                      src="img/xiaomiredmi-k20pro.png"
+                      alt="xiaomi redmi k20 pro"
+                    />
+                  </div>
+                  <div class="text-center star pt-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <div class="img-hoverbtn">
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Quick Shop"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none my-1"
+                      title="Add to Whishlist"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary hoverbtn boxsd-none"
+                      title="Add to Cart"
+                    >
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p>Xiaomi Redmi</p>
+                  </div>
+                  <div class="pb-2">
+                    <small><del>59990.00 ৳</del></small>
+                    <p>49999.00 ৳</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- offer end -->
+      </section>
+      <!-- content-4 end -->
+
+      <!-- content-5 start -->
+      <section class="content-5 my-padding" id="samsung">
+        <h3 class="my-h3">Samsung</h3>
+        <div class="my-grid-container pt-2">
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="samsunga51" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>samsung Galaxy A51</p>
+                </div>
+                <div class="pb-2">
+                  <p>30999.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy A30s" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy A30s</p>
+                </div>
+                <div class="pb-2">
+                  <p>19999.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy A71" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy A71</p>
+                </div>
+                <div class="pb-2">
+                  <p>42999.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy M10" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy M10</p>
+                </div>
+                <div class="pb-2">
+                  <p>10999.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy M10" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy M20</p>
+                </div>
+                <div class="pb-2">
+                  <p>15990.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy A50s" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy A50s</p>
+                </div>
+                <div class="pb-2">
+                  <p>27599.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy A50" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy A50</p>
+                </div>
+                <div class="pb-2">
+                  <p>24990.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy Note8" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy Note8</p>
+                </div>
+                <div class="pb-2">
+                  <p>89900.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img
+                    src="img/samsunga51.png"
+                    alt="Samsung Galaxy M30s 4GB/64GB"
+                  />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy M30s 4GB/64GB</p>
+                </div>
+                <div class="pb-2">
+                  <p>20500.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy M40" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy M40</p>
+                </div>
+                <div class="pb-2">
+                  <p>24990.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy M20" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy M20</p>
+                </div>
+                <div class="pb-2">
+                  <p>14900.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy A10" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy A10</p>
+                </div>
+                <div class="pb-2">
+                  <p>11990.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy A30" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy A30</p>
+                </div>
+                <div class="pb-2">
+                  <p>20999.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy S10+" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy S10+</p>
+                </div>
+                <div class="pb-2">
+                  <p>99900.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy Note10+" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy Note10+</p>
+                </div>
+                <div class="pb-2">
+                  <p>113900.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/samsunga51.png" alt="Samsung Galaxy J7 Pro" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Samsung Galaxy J7 pro</p>
+                </div>
+                <div class="pb-2">
+                  <p>16900.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- content-5 end -->
+
+      <!-- content-6 start -->
+      <section class="content-6 my-padding" id="fashionformen">
+        <h3 class="my-h3">Fashion For Men</h3>
+        <div class="my-grid-container pt-2">
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center py-2 px-1"
+                >
+                  <img src="img/t-shirt.png" alt="T-shirt" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>T-Shirt</p>
+                </div>
+                <div class="pb-2">
+                  <p>350.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- content-6 start -->
+
+      <!-- content-7 start -->
+      <section class="content-7 my-padding" id="xiaomi">
+        <h3 class="my-h3">Xiaomi</h3>
+        <div class="my-grid-container pt-2">
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img
+                    src="img/xiaomiredmi-k20pro.png"
+                    alt="xiaomi redmi k20 pro"
+                  />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi K20 Pro</p>
+                </div>
+                <div class="pb-2">
+                  <p>49999.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/xiaomiredmi-k20pro.png" alt="xiaomi redmi" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Xiaomi Redmi</p>
+                </div>
+                <div class="pb-2">
+                  <p>17000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- content-7 end -->
+
+      <!-- content-8 start -->
+      <section class="content-7 my-padding" id="fashionforwomen">
+        <h3 class="my-h3">Fashion For Women</h3>
+        <div class="my-grid-container pt-2">
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/fashionforwomen.png" alt="women clothes" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Women Cloth</p>
+                </div>
+                <div class="pb-2">
+                  <p>2590.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- content-8 start -->
+
+      <!-- content-9 start -->
+      <section class="content-9 my-padding" id="walton">
+        <h3 class="my-h3">Walton</h3>
+        <div class="my-grid-container pt-2">
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo R6" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo R6</p>
+                </div>
+                <div class="pb-2">
+                  <p>9599.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="my-grid-item">
+            <a href="product-html/samsung-phone/samsung-a51.html">
+              <div>
+                <div
+                  class="d-flex justify-content-center align-items-center pt-2 px-1"
+                >
+                  <img src="img/waltonprimo-r6.png" alt="walton primo" />
+                </div>
+                <div class="text-center star pt-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="fas fa-star text-secondary"></i>
+                </div>
+                <div class="img-hoverbtn">
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Quick Shop"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none my-1"
+                    title="Add to Whishlist"
+                  >
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button
+                    class="btn btn-secondary hoverbtn boxsd-none"
+                    title="Add to Cart"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p>Walton Primo</p>
+                </div>
+                <div class="pb-2">
+                  <p>10000.00 ৳</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- content-9 end -->
+    </section>
+    <!-- main-content end -->
+
+    <!-- extra content start -->
+    <hr />
+    <section class="extra-content">
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-10 col-sm-6 col-lg-3 offset-1 offset-sm-0">
+            <div class="row">
+              <div class="col-3 col-sm-3">
+                <img
+                  src="img/original.png"
+                  alt="100%original product"
+                  width="50"
+                  height="50"
+                />
+              </div>
+              <div class="col-9 col-sm-9">
+                <p>
+                  <strong>100% Original items</strong> are available our
+                  company.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-3 offset-1 offset-sm-0">
+            <div class="row">
+              <div class="col-3 col-sm-3">
+                <img
+                  src="img/return.png"
+                  alt="return our product"
+                  width="50"
+                  height="50"
+                />
+              </div>
+              <div class="col-9 col-sm-9">
+                <p>
+                  <strong>Return within 14days</strong> of receving your order.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-3 offset-1 offset-sm-0">
+            <div class="row">
+              <div class="col-3 col-sm-3">
+                <img
+                  src="img/delivery.png"
+                  alt="delivery"
+                  width="50"
+                  height="50"
+                />
+              </div>
+              <div class="col-9 col-sm-9">
+                <p>
+                  <strong>Get free delivery,</strong> if you order more than 10
+                  items.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-3 offset-1 offset-sm-0">
+            <div class="row">
+              <div class="col-3 col-sm-3">
+                <img
+                  src="img/payment.png"
+                  alt="payment methood"
+                  width="50"
+                  height="50"
+                />
+              </div>
+              <div class="col-9 col-sm-9">
+                <p>
+                  <strong>Pay online through multiple</strong> options (Card/Net
+                  banking)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- extra content end -->
+
+    <!-- footer start -->
+    <hr />
+    <section class="footer">
+      <div class="container-fluid mt-3 bg-dark text-justify">
+        <div class="row text-white py-2">
+          <div
+            class="col-6 col-sm-6 col-lg-3 d-flex justify-content-center pt-3"
+          >
+            <div class="d-block">
+              <h6 class="pb-2">Usefull Link</h6>
+              <a href="#">Privacy Policy</a><br />
+              <a href="#">Terms & Condition</a><br />
+              <a href="#">Rutern Policy</a><br />
+              <a href="#">Discount Coupons</a>
+            </div>
+          </div>
+
+          <div
+            class="col-6 col-sm-6 col-lg-3 d-flex justify-content-center pt-3"
+          >
+            <div class="d-block">
+              <h6 class="pb-2">Follow Us</h6>
+              <a href="#"><i class="fab fa-youtube fa-2x pr-3"></i>Youtube</a
+              ><br />
+              <a href="#"><i class="fab fa-twitter fa-2x pr-3"></i>Twitter</a
+              ><br />
+              <a href="#"><i class="fab fa-instagram fa-2x"></i>Instagram</a
+              ><br />
+              <a href="#"><i class="fab fa-facebook fa-2x pr-3"></i>Facebook</a>
+            </div>
+          </div>
+
+          <div
+            class="col-6 col-sm-6 col-lg-3 d-flex justify-content-center pt-3"
+          >
+            <div class="d-block">
+              <h6 class="pb-2">Company</h6>
+              <a href="#">About Us</a><br />
+              <a href="#">Contact Us</a><br />
+              <a href="#">Career</a><br />
+              <a href="#">Affliant</a>
+            </div>
+          </div>
+          <div
+            class="col-6 col-sm-6 col-lg-3 d-flex justify-content-center pt-3"
+          >
+            <div class="d-block">
+              <h6 class="pl-2 pb-2">Download App</h6>
+              <a href="#"
+                ><img
+                  src="img/playstore.png"
+                  alt="app Download link"
+                  width="100"
+                  height="70"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pb-1 pt-3 text-center">
+          <p>Copyright©2020.myshop.com.All-Right.Reserved</p>
+        </div>
+      </div>
+    </section>
+    <!-- footer end -->
+
+    <!-- myscript start -->
+    <script src="js/myscript.js"></script>
+    <!-- myscript end -->
+
+    <!-- bootstrap4 script start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- bootstrap4 script end -->
+
+    <!-- html5 boilerplate script start -->
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="https://code.jquery.com/jquery-3.4.1.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- html5 boilerplate script end -->
+  </body>
+</html>
